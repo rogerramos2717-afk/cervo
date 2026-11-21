@@ -23,7 +23,7 @@
    ===================================================================== */
 window.TIENDA_CONFIG = {
   // ⬇️ Pega aquí tu ID de medición de GA4, entre comillas.
-  GA_MEASUREMENT_ID: "G-XXXXXXXXXX",
+  GA_MEASUREMENT_ID: "G-K0MDL4C45V",
 
   // ⬇️ true durante el laboratorio (DebugView); false para envío normal.
   DEBUG_MODE: true
