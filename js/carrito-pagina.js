@@ -26,21 +26,24 @@
       var unit = Carrito.precioUnitario(p);
       html +=
         '<div class="linea-carrito">' +
-          '<div class="visual visual-mini" style="background:' + p.fondo + '"><span class="visual-siglas">' + p.siglas + "</span></div>" +
-          '<div class="linea-info">' +
-            '<a href="producto.html?id=' + encodeURIComponent(p.id) + '">' + p.nombre + "</a>" +
-            '<div class="texto-2" style="font-size:14px">' + p.categoria + " · " + Carrito.cop(unit) + " c/u" +
-              (unit !== p.precio ? ' <span class="precio-antes">' + Carrito.cop(p.precio) + "</span>" : "") + "</div>" +
-            '<div class="selector-cantidad" style="margin-top:8px" role="group" aria-label="Cantidad de ' + p.nombre + '">' +
-              '<button type="button" data-accion="menos" data-id="' + p.id + '" aria-label="Quitar una unidad">−</button>' +
-              "<span>" + l.cantidad + "</span>" +
-              '<button type="button" data-accion="mas" data-id="' + p.id + '" aria-label="Agregar una unidad">+</button>' +
-            "</div>" +
-          "</div>" +
-          '<div class="linea-acciones">' +
-            '<span class="linea-subtotal">' + Carrito.cop(unit * l.cantidad) + "</span>" +
-            '<button type="button" class="boton-texto" data-accion="eliminar" data-id="' + p.id + '">Eliminar</button>' +
-          "</div>" +
+        '<div class="visual visual-mini" style="background:' + p.fondo + '">' +
+        (p.svg ? '<div class="visual-figura">' + p.svg + "</div>" : "") +
+        '<span class="visual-siglas">' + p.siglas + "</span>" +
+        "</div>" +
+        '<div class="linea-info">' +
+        '<a href="producto.html?id=' + encodeURIComponent(p.id) + '">' + p.nombre + "</a>" +
+        '<div class="texto-2" style="font-size:14px">' + p.categoria + " · " + Carrito.cop(unit) + " c/u" +
+        (unit !== p.precio ? ' <span class="precio-antes">' + Carrito.cop(p.precio) + "</span>" : "") + "</div>" +
+        '<div class="selector-cantidad" style="margin-top:8px" role="group" aria-label="Cantidad de ' + p.nombre + '">' +
+        '<button type="button" data-accion="menos" data-id="' + p.id + '" aria-label="Quitar una unidad">−</button>' +
+        "<span>" + l.cantidad + "</span>" +
+        '<button type="button" data-accion="mas" data-id="' + p.id + '" aria-label="Agregar una unidad">+</button>' +
+        "</div>" +
+        "</div>" +
+        '<div class="linea-acciones">' +
+        '<span class="linea-subtotal">' + Carrito.cop(unit * l.cantidad) + "</span>" +
+        '<button type="button" class="boton-texto" data-accion="eliminar" data-id="' + p.id + '">Eliminar</button>' +
+        "</div>" +
         "</div>";
     });
     html += "</div>";

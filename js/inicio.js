@@ -29,6 +29,7 @@
     a.href = "producto.html?id=" + encodeURIComponent(p.id);
     a.innerHTML =
       '<div class="visual" style="background:' + p.fondo + '">' +
+        (p.svg ? '<div class="visual-figura">' + p.svg + "</div>" : "") +
         '<span class="visual-siglas">' + p.siglas + "</span>" +
         '<span class="visual-marca">Cervo</span>' +
       "</div>" +

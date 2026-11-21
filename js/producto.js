@@ -28,6 +28,7 @@
   cont.innerHTML =
     '<div class="detalle">' +
       '<div class="visual visual-grande" style="background:' + p.fondo + '">' +
+        (p.svg ? '<div class="visual-figura">' + p.svg + "</div>" : "") +
         '<span class="visual-siglas">' + p.siglas + '</span><span class="visual-marca">Cervo · ' + p.id + "</span>" +
       "</div>" +
       '<div class="detalle-info">' +
